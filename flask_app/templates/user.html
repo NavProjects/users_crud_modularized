@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+</head>
+<body>
+    <div style="display: flex; align-items: center; justify-content: space-between; padding-left: 10%; padding-right: 10%;">
+        <h1>User {{ user.id }}</h1>
+        <a href="/users">Home</a>
+    </div>
+    <div style="border: 1px solid black; margin-left: 10%; margin-right: 10%;">
+        <p>Full Name:{{ user.first_name }} {{user.last_name}}</p>
+        <p>Email:{{ user.email }}</p>
+        <p>Created On:{{ user.created_at }}</p>
+        <p>Last Updated On:{{ user.updated_at }}</p>
+    </div>
+    <div style="padding-left: 10%; padding-right: 10%; margin-top: 2%;">
+        <a href="/user/{{user.id}}/edit">Edit</a>
+        <span> | </span>
+        <a href="/user/{{user.id}}/remove">Delete</a>
+    </div>
+</body>
+</html>
